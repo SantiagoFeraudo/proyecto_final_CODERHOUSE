@@ -1,12 +1,13 @@
 body {
-    background: rgb(255, 255, 255);
+    background: rgb(127, 127, 127);
 }
 
 .bg-black {
-    background: #ffffff;
+    background: #000000;
 }
 
 .img {
     width: 200px;
     height: 300px;
 }
+

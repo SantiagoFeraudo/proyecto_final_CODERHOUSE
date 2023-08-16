@@ -1,16 +1,6 @@
-# created by virtualenv automatically
 # Ignorar archivos generados por Django
-_pycache_/
+pycache/
 *.py[cod]
-
-# Ignorar el archivo de configuración local
-settings.py
-
-# Ignorar el archivo de migraciones
-/migrations/
-
-# Ignorar archivos estáticos compilados
-/staticfiles/
 
 # Ignorar archivos de entorno virtual (por ejemplo, con virtualenv o pipenv)
 venv/
@@ -28,3 +18,4 @@ node_modules/
 venv/
 Pipfile
 Pipfile.lock
+

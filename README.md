@@ -10,16 +10,16 @@ Pass: santiago01
 
 ## Detalle a tener en cuenta
 # Librerias utilizadas
-asgiref             3.7.2
-crispy-bootstrap5   0.7
-Django              4.2.4
-django-crispy-forms 2.0
-Pillow              10.0.0
-pip                 23.2.1
-setuptools          68.0.0
-sqlparse            0.4.4
-tzdata              2023.3
-wheel               0.41.1
+-asgiref             3.7.2
+-crispy-bootstrap5   0.7
+-Django              4.2.4
+-django-crispy-forms 2.0
+-Pillow              10.0.0
+-pip                 23.2.1
+-setuptools          68.0.0
+-sqlparse            0.4.4
+-tzdata              2023.3
+-wheel               0.41.1
 
 ## Dejo aqui el link del video para poder verlo
 
