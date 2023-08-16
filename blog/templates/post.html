@@ -1,0 +1,42 @@
+{% extends 'layoul.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<h1> POST </h1>
+
+{% for post in posts %}
+
+    <h2>{{post.title}}</h2>
+    <p>{{post.description}}</p>
+    <p>{{post.date|date:'l d, F, o'}}</p>
+    <img src= "{{post.image.url}}" alt="{{post.title}}" />
+
+    <a href="{% url 'blog:post_detail' post.id %}">{{post.title}}</a>
+
+    <h3 id='comments-section' >Comentarios</h3>
+    <hr class="d-none d-mb-block my-2 my-3 mt-2">
+
+    <form method="post">
+        {% csrf_token%}
+        {{ form | crispy }}
+        <button class="btn btn-primary " type="submit">Enviar</button>
+    </form>
+    <hr class="d-none d-mb-block my-2 mb-3 mt-2">
+
+    {% for comment in post.comment_set.all %}
+        <div class="mt-4 mb-2 border-end border-bottom border-opacity-10 rounded p-1">
+            <div class="row">
+                <div class="col-8 d-flex">
+                    <h5> {{ comment.author.username }} </h5>
+                    <span>- {{ comment.post_date }}</span>
+                </div>
+                <div class="col-4 text-end">
+                </div>
+            </div>
+            {{ comment.content }}
+        </div>
+    {% endfor %}
+
+{% endfor %}
+
+{% endblock %}

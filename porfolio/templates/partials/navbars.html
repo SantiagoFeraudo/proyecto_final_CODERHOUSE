@@ -1,0 +1,25 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <div class="container">
+    <a class="navbar-brand fw-bold fst-italic" href="/">HOME</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'blog:posts' %}">Blog</a>
+        </li>
+  {% if user.is_autenticated  %}
+        <a class="btn btn-outline-primary ms-2" href="{% url 'logout' %}" role="button">Sing Out</a>
+  {% else %}
+        <a class="btn btn-outline-primary ms-2" href="{% url 'login' %}" role="button">Sing In</a>
+  {% endif %}
+  </div>
+
+  
+</nav>
+
+
